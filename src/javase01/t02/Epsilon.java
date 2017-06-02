@@ -1,3 +1,5 @@
+package javase01.t02;
+
 public class Epsilon {
     public static void main(String[] args){
         long i = 1;
@@ -8,7 +10,7 @@ public class Epsilon {
             System.out.format("a[%d] = %.4f, %n", i, a);
             i++;
         }
-            while (a >= E);
+        while (a >= E);
         System.out.format("искомый номер последовательности: %d.%n", i - 1);
     }
 }
