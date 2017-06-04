@@ -12,4 +12,4 @@ java -cp bin javase01/t03/Tg 1 4 .5
 echo "Task #4"
 echo "WARNING! Task is solved for array (a1, a2 … a2n), because solving for (a1, a2 … an) doesn't make sense."
 javac -d bin src/javase01/t04/Arrs.java
-java -cp bin javase01/t04/Arrs 1 2 4 5 4 5 1 2 4 3
+java -cp bin javase01/t04/Arrs 1 2 4 5 3 5 1 2 4 3
