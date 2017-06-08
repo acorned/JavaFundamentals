@@ -3,24 +3,25 @@ package javase01.t06;
 /**
  * Created by acorned on 06.06.17.
  */
+
 public class Note {
     private NoteRecord[] notes = new NoteRecord[50];
-    private int numberOfRecords;
+    private int numberOfRecords = 0;
 
-    Note(int index, NoteRecord note) {
-        this.notes[index] = note;
+    boolean addRecord(NoteRecord record) {
+        for (int i = 0; i < notes.length; i++) {
+            if (notes[i] == null) {
+             notes[i] = record;
+             return true;
+            }
+        }
+        return false;
     }
 
-    public NoteRecord[] getNotes() {
-        return notes;
-    }
-
-    private void addNote() {
-        //add note
-    }
-
-    private void deleteNote(String header) {
-        //delete note
+    void printRecords() {
+        for (NoteRecord note : notes) {
+            if (note != null) System.out.printf("%s %s%n", note.getHeader(), note.getText());
+        }
     }
 }
 
