@@ -10,7 +10,7 @@ public class Note {
     private NoteRecord[] notes = new NoteRecord[50];
     /**
      * Adds a new record to notes.
-     * @return "true" if record was added and "false" if notepad is full.
+     * @return {@code true} if record was added and {@code false} if notepad is full.
      * @param record New record. */
     boolean addRecord(NoteRecord record) {
         for (int i = 0; i < notes.length; i++) {
