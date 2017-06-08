@@ -17,6 +17,15 @@ public class Note {
         }
         return false;
     }
+    void removeRecordByIndex(int index) throws IndexOutOfBoundsException, NoEntryException {
+
+        if (index > notes.length)
+            throw new IndexOutOfBoundsException();
+        else if (notes[index] == null)
+            throw new NoEntryException();
+        else
+            notes[index] = null;
+    }
 
     void printRecords() {
         for (NoteRecord note : notes) {

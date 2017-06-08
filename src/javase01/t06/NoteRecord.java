@@ -3,6 +3,7 @@ package javase01.t06;
 /**
  * Created by Александр on 08/06/2017.
  */
+
 public class NoteRecord {
     private String header = null;
     private String text = null;
@@ -19,9 +20,12 @@ public class NoteRecord {
     public String getText() {
         return text;
     }
-//  void editRecord(sourcHeader, newHeader, newText) {
-    //      NoteRecord.header =
-    //  }
 
-    ;
+    public void setHeader(String header) {
+        this.header = header;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 }

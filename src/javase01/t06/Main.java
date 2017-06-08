@@ -5,7 +5,6 @@ package javase01.t06;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Main");
         Note notepad = new Note();
         NoteRecord record = new NoteRecord("Title", "Some text to write");
         NoteRecord record2 = new NoteRecord("Other Title", "Some another text");
@@ -14,6 +13,18 @@ public class Main {
         notepad.addRecord(record2);
         notepad.addRecord(record3);
         notepad.printRecords();
+        notepad.removeRecordByIndex(1);
+        notepad.printRecords();
+        try{
+            notepad.removeRecordByIndex(1);
+        } catch(IndexOutOfBoundsException e)
 
+        {
+            System.out.println("Wrong index");
+        } catch(NoEntryException e)
+
+        {
+            System.out.println("Page is empty");
+        }
     }
 }
