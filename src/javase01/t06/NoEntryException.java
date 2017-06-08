@@ -1,8 +1,9 @@
 package javase01.t06;
 
-/**
- * Created by Александр on 08/06/2017.
+/** Simple exception which means that record wasn't found.
+ * @author Alexander Zheludkov
+ * @version 1.0
  */
 
-class NoEntryException extends RuntimeException{};
+public class NoEntryException extends RuntimeException{};
 

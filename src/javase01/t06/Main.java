@@ -1,7 +1,9 @@
 package javase01.t06;
 
 /**
- * Created by Александр on 06/06/2017.
+ * Class and method for demonstration of {@link Note} and {@link NoteRecord}
+ * @author Alexander Zheludkov
+ * @version 1.0
  */
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +12,10 @@ public class Main {
 
         notepad.addRecord(new NoteRecord("Title", "Some text to write"));
         notepad.addRecord(new NoteRecord("Other Title", "Some another text"));
-        notepad.addRecord(new NoteRecord("", "Text without title"));
+        if (notepad.addRecord(new NoteRecord("", "Text without title")))
+            System.out.println("Record added successfully");
+        else
+            System.out.println("Note is full, try to delete some records");
 
         //Now let's print all the records
         notepad.printRecords();
