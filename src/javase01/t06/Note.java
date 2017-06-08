@@ -26,10 +26,20 @@ public class Note {
         else
             notes[index] = null;
     }
+    void editRecordByIndex(int index, String newHeader, String newText) throws IndexOutOfBoundsException, NoEntryException {
+
+        if (index > notes.length)
+            throw new IndexOutOfBoundsException();
+        else if (notes[index] == null)
+            throw new NoEntryException();
+        notes[index].setHeader(newHeader);
+        notes[index].setText(newText);
+
+    }
 
     void printRecords() {
         for (NoteRecord note : notes) {
-            if (note != null) System.out.printf("%s %s%n", note.getHeader(), note.getText());
+            if (note != null) System.out.printf("%s%n%s%n", note.getHeader(), note.getText());
         }
     }
 }
