@@ -7,11 +7,12 @@ public class Main {
     public static void main(String[] args) {
         Note notepad = new Note();
         NoteRecord record = new NoteRecord("Title", "Some text to write");
-        NoteRecord record2 = new NoteRecord("Other Title", "Some another text");
-        NoteRecord record3 = new NoteRecord("", "Text without title");
         notepad.addRecord(record);
-        notepad.addRecord(record2);
-        notepad.addRecord(record3);
+        record = new NoteRecord("Other Title", "Some another text");
+        notepad.addRecord(record);
+        record = new NoteRecord("", "Text without title");
+        notepad.addRecord(record);
+
         notepad.printRecords();
         notepad.removeRecordByIndex(1);
         notepad.printRecords();
@@ -20,11 +21,13 @@ public class Main {
         } catch(IndexOutOfBoundsException e)
 
         {
-            System.out.println("Wrong index");
+            System.err.println("FAILED. Wrong index");
         } catch(NoEntryException e)
 
         {
-            System.out.println("Page is empty");
+            System.err.println("FAILED. Page is empty");
         }
+        notepad.printRecords();
+
     }
 }
