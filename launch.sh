@@ -20,4 +20,4 @@ echo "Task #6"
 javac -d bin -cp src src/javase01/t06/Main.java
 java -cp bin javase01/t06/Main
 echo "Creating javadoc:"
-javadoc -private -noindex -author -version javase01.t06 -sourcepath src -link http://docs.oracle.com/javase/8/docs/api/ -d /home/acorned/IdeaProjects/JF/bin/javase01/t06
+javadoc -private -noindex -author -version javase01.t06 -sourcepath src -link http://docs.oracle.com/javase/8/docs/api/ -d /home/acorned/IdeaProjects/JF/bin/javase01/t06/doc
