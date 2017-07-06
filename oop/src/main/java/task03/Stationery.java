@@ -1,10 +1,10 @@
 package task03;
 
-public abstract class Clerical {
+public abstract class Stationery {
     private int cost;
     private String name;
 
-    Clerical(int cost, String name){
+    Stationery(int cost, String name){
         this.cost = cost;
         this.name = name;
     }

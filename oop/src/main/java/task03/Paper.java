@@ -6,12 +6,12 @@ import java.util.List;
 /**
  * Created by acorned on 06.07.17.
  */
-public class Papers extends Clerical {
+public class Paper extends Stationery {
     private final int numberOfPages;
     private final String paperColor;
     private List<String> content = new LinkedList<>();
 
-    public Papers(String name, int numberOfPages, String paperColor, int cost){
+    public Paper(String name, int numberOfPages, String paperColor, int cost){
         super(cost, name);
         this.numberOfPages = numberOfPages;
         this.paperColor = paperColor;

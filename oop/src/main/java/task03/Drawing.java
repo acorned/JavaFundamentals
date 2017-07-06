@@ -3,7 +3,7 @@ package task03;
 /**
  * Created by acorned on 06.07.17.
  */
-public class Drawing extends Clerical {
+public class Drawing extends Stationery {
     private int inkLevel;
     private final String color;
 

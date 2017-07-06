@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-class ClericalTest {
+class StationeryTest {
     @Test
     void clerkTest() {
         Clerk clerk = new Clerk();
-        Papers ledger = new Papers("Thick ledger", 96, "White", 100);
+        Paper ledger = new Paper("Thick ledger", 96, "White", 100);
         Drawing pen = new Drawing("Pen", "Blue", 100);
 
         for (int i = 0; i < 10; i++) {
