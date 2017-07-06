@@ -16,6 +16,7 @@ public class Drawing extends Clerical {
     public boolean isEmpty(){
         return inkLevel <= 0;
     }
+
     public void use(){
         inkLevel--;
     }

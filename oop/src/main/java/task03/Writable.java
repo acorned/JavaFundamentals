@@ -12,8 +12,11 @@ public class Writable implements Clerical {
     private List<String> content = new LinkedList<>();
 
     public Writable(String name, int numberOfPages, String paperColor, int cost){
+        this.name = name;
+        this.cost = cost;
         this.numberOfPages = numberOfPages;
         this.paperColor = paperColor;
+
     }
 
     public writeText(String text, Drawing draw){
