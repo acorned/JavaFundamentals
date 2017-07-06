@@ -1,13 +1,23 @@
 package task03;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 /**
  * Created by acorned on 06.07.17.
  */
-public interface Clerical {
+public abstract class Clerical {
     int cost;
     String name;
 
-    int getCost();
-    String getName();
+    public int getCost() {return cost;}
+    public String getName() {return name;}
+
+
+    void takeToClerk(Clerk clerk) {
+        clerk.addItem(this);
+    }
+
+    abstract void displayAllFields();
 
 }
