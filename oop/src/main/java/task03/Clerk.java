@@ -18,4 +18,12 @@ public class Clerk {
         }
         return sum;
     }
+
+    String[] getAllNames() {
+        String[] items = new String[workplace.size()];
+        for (int i = 0; i < workplace.size(); i++) {
+            items[i] = workplace.get(i).getName();
+        }
+        return items;
+    }
 }

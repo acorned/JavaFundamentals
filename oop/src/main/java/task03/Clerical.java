@@ -1,12 +1,8 @@
 package task03;
 
-
-/**
- * Created by acorned on 06.07.17.
- */
 public abstract class Clerical {
-    int cost;
-    String name;
+    protected int cost;
+    protected String name;
 
     public int getCost() {return cost;}
     public String getName() {return name;}

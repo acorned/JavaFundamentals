@@ -6,9 +6,9 @@ import java.util.List;
 /**
  * Created by acorned on 06.07.17.
  */
-public class Writable implements Clerical {
-    private final int numberOfPages;
-    private final String paperColor;
+public class Writable extends Clerical {
+    final int numberOfPages;
+    final String paperColor;
     private List<String> content = new LinkedList<>();
 
     public Writable(String name, int numberOfPages, String paperColor, int cost){
@@ -19,19 +19,25 @@ public class Writable implements Clerical {
 
     }
 
-    public writeText(String text, Drawing draw){
+    public String writeText(String text, Drawing draw){
         if (!draw.isEmpty()) {
             draw.use();
             content.add(text);
+            return text;
         }
-        else System.out.println("Draw is empty, try another one");
+        else return "Draw is empty, try another one";
 
     }
-    public showContent() {
+    public void showContent() {
         for (String item: content) {
             System.out.println(item);
         }
     }
 
+    void displayAllFields(){
+        System.out.println(numberOfPages);
+        System.out.println(paperColor);
+        showContent();
+    }
 
 }

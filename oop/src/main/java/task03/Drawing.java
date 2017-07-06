@@ -20,4 +20,12 @@ public class Drawing extends Clerical {
     public void use(){
         inkLevel--;
     }
+
+    void displayAllFields(){
+        System.out.println("name = " + name);
+        System.out.println("color = " + color);
+        System.out.println("ink level = " + inkLevel);
+        System.out.println("cost = " + cost);
+
+    }
 }
