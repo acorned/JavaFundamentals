@@ -4,7 +4,7 @@ public abstract class Stationery {
     private int cost;
     private String name;
 
-    Stationery(int cost, String name){
+    Stationery(String name, int cost){
         this.cost = cost;
         this.name = name;
     }

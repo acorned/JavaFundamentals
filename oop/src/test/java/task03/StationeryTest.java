@@ -11,21 +11,23 @@ class StationeryTest {
         Clerk clerk = new Clerk();
         Paper ledger = new Paper("Thick ledger", 96, "White", 100);
         Drawing pen = new Drawing("Pen", "Blue", 100);
+        Eraser eraser = new Eraser("Eraser", 20);
 
         for (int i = 0; i < 10; i++) {
             assertThat(ledger.writeText("There is a string in ledger", pen), is("There is a string in ledger"));
         }
-        assertThat(ledger.writeText("There is a string in ledger", pen), is("Draw is empty, try another one"));
-
+        assertThat(ledger.writeText("There is a string in ledger", pen), is("Writing device is empty, try another one"));
+        ledger.erasureText(0, eraser);
         pen.displayAllFields();
 
         ledger.takeToClerk(clerk);
         pen.takeToClerk(clerk);
+        eraser.takeToClerk(clerk);
 
-        String[] a = {"Thick ledger", "Pen"};
+        String[] a = {"Thick ledger", "Pen", "Eraser"};
         assertThat(clerk.getAllNames(), is(a));
 
-        assertThat(clerk.getWholeCost(), is(200));
+        assertThat(clerk.getWholeCost(), is(220));
         }
 
     }

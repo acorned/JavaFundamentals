@@ -8,7 +8,7 @@ public class Drawing extends Stationery {
     private final String color;
 
     public Drawing(String name, String color, int cost){
-        super(cost, name);
+        super(name, cost);
         this.color = color;
         this.inkLevel = 10;
     }
@@ -20,6 +20,7 @@ public class Drawing extends Stationery {
         inkLevel--;
     }
 
+    @Override
     void displayAllFields(){
         System.out.println("name = " + getName());
         System.out.println("color = " + color);

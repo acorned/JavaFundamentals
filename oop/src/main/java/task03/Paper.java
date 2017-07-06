@@ -12,7 +12,7 @@ public class Paper extends Stationery {
     private List<String> content = new LinkedList<>();
 
     public Paper(String name, int numberOfPages, String paperColor, int cost){
-        super(cost, name);
+        super(name, cost);
         this.numberOfPages = numberOfPages;
         this.paperColor = paperColor;
 
@@ -27,12 +27,22 @@ public class Paper extends Stationery {
         else return "Writing device is empty, try another one";
 
     }
+
+    public String erasureText(int index, Eraser eraser){
+        if (eraser.isUsable()) {
+            eraser.use();
+            return content.remove(index);
+        }
+        return "Can't erase, replace the eraser.";
+    }
+
     public void showContent() {
         for (String item: content) {
             System.out.println(item);
         }
     }
 
+    @Override
     void displayAllFields(){
         System.out.println(numberOfPages);
         System.out.println(paperColor);
