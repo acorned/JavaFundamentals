@@ -18,7 +18,7 @@ class StationeryTest {
         }
         assertThat(ledger.writeText("There is a string in ledger", pen), is("Writing device is empty, try another one"));
         ledger.erasureText(0, eraser);
-        pen.displayAllFields();
+        eraser.displayAllFields();
 
         ledger.takeToClerk(clerk);
         pen.takeToClerk(clerk);

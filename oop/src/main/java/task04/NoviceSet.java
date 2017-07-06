@@ -13,7 +13,8 @@ public class NoviceSet implements Comparable<NoviceSet>{
         return item;
     }
 
-    public int compareTo(NoviceSet set, String sort) {
+    public int compareTo(NoviceSet set) {
+        String sort = "name";
         switch (sort) {
             case "name":
                 //sort by name
@@ -21,7 +22,7 @@ public class NoviceSet implements Comparable<NoviceSet>{
             case "cost":
                 //sort by cost
                 return 0;
-            case "cost and name"
+            case "cost and name":
                 //sort by cost, then by name
                 return 0;
             default:
