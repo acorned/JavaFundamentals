@@ -18,13 +18,13 @@ public class Paper extends Stationery {
 
     }
 
-    public String writeText(String text, Drawing draw){
-        if (!draw.isEmpty()) {
-            draw.use();
+    public String writeText(String text, Drawing device){
+        if (!device.isEmpty()) {
+            device.use();
             content.add(text);
             return text;
         }
-        else return "Draw is empty, try another one";
+        else return "Writing device is empty, try another one";
 
     }
     public void showContent() {
