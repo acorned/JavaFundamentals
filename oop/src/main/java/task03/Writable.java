@@ -7,13 +7,12 @@ import java.util.List;
  * Created by acorned on 06.07.17.
  */
 public class Writable extends Clerical {
-    final int numberOfPages;
-    final String paperColor;
+    private final int numberOfPages;
+    private final String paperColor;
     private List<String> content = new LinkedList<>();
 
     public Writable(String name, int numberOfPages, String paperColor, int cost){
-        this.name = name;
-        this.cost = cost;
+        super(cost, name);
         this.numberOfPages = numberOfPages;
         this.paperColor = paperColor;
 

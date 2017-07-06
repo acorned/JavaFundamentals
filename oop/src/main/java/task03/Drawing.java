@@ -5,12 +5,11 @@ package task03;
  */
 public class Drawing extends Clerical {
     private int inkLevel;
-    final String color;
+    private final String color;
 
     public Drawing(String name, String color, int cost){
+        super(cost, name);
         this.color = color;
-        this.name = name;
-        this.cost = cost;
         this.inkLevel = 10;
     }
     public boolean isEmpty(){
@@ -22,10 +21,10 @@ public class Drawing extends Clerical {
     }
 
     void displayAllFields(){
-        System.out.println("name = " + name);
+        System.out.println("name = " + getName());
         System.out.println("color = " + color);
         System.out.println("ink level = " + inkLevel);
-        System.out.println("cost = " + cost);
+        System.out.println("cost = " + getCost());
 
     }
 }
