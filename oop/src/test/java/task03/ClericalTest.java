@@ -9,7 +9,7 @@ class ClericalTest {
     @Test
     void clerkTest() {
         Clerk clerk = new Clerk();
-        Writable ledger = new Writable("Thick ledger", 96, "White", 100);
+        Papers ledger = new Papers("Thick ledger", 96, "White", 100);
         Drawing pen = new Drawing("Pen", "Blue", 100);
 
         for (int i = 0; i < 10; i++) {
