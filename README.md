@@ -1,4 +1,4 @@
-# JavaFundamentals
+# Java Fundamentals
 
 ## What's this?
 There is a solution of all tasks given at EPAM Java Core training.
@@ -11,5 +11,5 @@ There is a solution of all tasks given at EPAM Java Core training.
 5. ~~Exceptions~~
 
 ## How it works
-Module 'Intro' can be run by launching <blockquote>launch.sh</blockquote>. All the rest modules are checked by JUnit5. 
+Module 'Intro' can be run by launching <code>launch.sh</code>. All the rest modules are checked by JUnit5. 
 Project can be built by Gradle, settings files are included.
