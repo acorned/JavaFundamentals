@@ -1,40 +1,28 @@
 package task04;
 
 import org.junit.jupiter.api.Test;
-import task03.*;
-import java.util.List;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class NoviceTest {
     @Test
-    void setSortedByName() {
+    void sortBy() {
         Novice clerk = new Novice();
-        List<Stationery> noviceWorkplace = clerk.getWorkplace();
-        System.out.println(clerk.getWholeCost());
-
-        for (Stationery stat : noviceWorkplace) {
-            System.out.println(stat.getName());
-        }
 
         clerk.sortByName();
-        System.out.println();
-
-        for (Stationery stat : noviceWorkplace) {
-            System.out.println(stat.getName());
+        for (int i = 0; i < clerk.getWorkplace().size() - 1; i++){
+            assertTrue(clerk.getWorkplace().get(i).getName().compareTo(clerk.getWorkplace().get(i + 1).getName()) <= 0);
         }
 
         clerk.sortByCost();
-        System.out.println();
-
-        for (Stationery stat : noviceWorkplace) {
-            System.out.println(stat.getCost());
+        for (int i = 0; i < clerk.getWorkplace().size() - 1; i++){
+            assertTrue(clerk.getWorkplace().get(i).getCost() <= clerk.getWorkplace().get(i + 1).getCost());
         }
-
         clerk.sortByCostAndName();
-        System.out.println();
-
-        for (Stationery stat : noviceWorkplace) {
-            System.out.println(stat.getName());
+        for (int i = 0; i < clerk.getWorkplace().size() - 1; i++){
+            assertTrue(clerk.getWorkplace().get(i).getCost() <= clerk.getWorkplace().get(i + 1).getCost() ||
+                    clerk.getWorkplace().get(i).getName().compareTo(clerk.getWorkplace().get(i + 1).getName()) <= 0);
         }
     }
+
 
 }

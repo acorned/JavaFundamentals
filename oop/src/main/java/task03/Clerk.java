@@ -29,4 +29,6 @@ public class Clerk {
     public List<Stationery> getWorkplace(){
         return this.workplace;
     }
+
+
 }

@@ -11,6 +11,7 @@ public abstract class Stationery {
 
     public int getCost() {return cost;}
     public String getName() {return name;}
+    public String getNameAndCost() {return name + " " + cost;}
 
 
     void takeToClerk(Clerk clerk) {
