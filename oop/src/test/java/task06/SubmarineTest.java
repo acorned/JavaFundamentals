@@ -4,9 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Created by Александр on 11/07/2017.
- */
 class SubmarineTest {
     @Test
     void goSwim() {
