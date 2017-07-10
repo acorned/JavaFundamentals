@@ -1,7 +1,7 @@
 package task04;
 
 import task03.*;
-import java.util.Comparator;
+import static java.util.Comparator.*;
 
 public class Novice extends Clerk{
 
@@ -19,13 +19,13 @@ public class Novice extends Clerk{
     }
 
     public void sortByName(){
-        this.getWorkplace().sort(Comparator.comparing(Stationery::getName));
+        this.getWorkplace().sort(comparing(Stationery::getName));
     }
     public void sortByCost() {
-        this.getWorkplace().sort(Comparator.comparing(Stationery::getCost));
+        this.getWorkplace().sort(comparing(Stationery::getCost));
     }
 
     public void sortByCostAndName() {
-        this.getWorkplace().sort(Comparator.comparing(Stationery::getCost).thenComparing(Stationery::getName));
+        this.getWorkplace().sort(comparing(Stationery::getCost).thenComparing(Stationery::getName));
     }
 }
