@@ -21,7 +21,7 @@ public class Drawing extends Stationery {
     }
 
     @Override
-    void displayAllFields(){
+    public void displayAllFields(){
         System.out.println("name = " + getName());
         System.out.println("color = " + color);
         System.out.println("ink level = " + inkLevel);

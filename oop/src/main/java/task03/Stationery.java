@@ -17,6 +17,6 @@ public abstract class Stationery {
         clerk.addItem(this);
     }
 
-    abstract void displayAllFields();
+    public abstract void displayAllFields();
 
 }

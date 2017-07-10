@@ -43,7 +43,7 @@ public class Paper extends Stationery {
     }
 
     @Override
-    void displayAllFields(){
+    public void displayAllFields(){
         System.out.println(numberOfPages);
         System.out.println(paperColor);
         showContent();

@@ -10,7 +10,7 @@ public class Clerk {
         workplace.add(item);
     }
 
-    int getWholeCost() {
+    public int getWholeCost() {
         int sum = 0;
         for (Stationery item:
              workplace) {

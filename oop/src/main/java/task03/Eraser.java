@@ -15,7 +15,7 @@ public class Eraser extends Stationery {
     public boolean isUsable() {return wasteInPercents < 100;}
 
     @Override
-    void displayAllFields() {
+    public void displayAllFields() {
         System.out.println("name = " + getName());
         System.out.println("waste = " + wasteInPercents);
         System.out.println("cost = " + getCost());
