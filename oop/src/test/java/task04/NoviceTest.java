@@ -15,7 +15,22 @@ class NoviceTest {
             System.out.println(stat.getName());
         }
 
-        clerk.setSortedByName();
+        clerk.sortByName();
+        System.out.println();
+
+        for (Stationery stat : noviceWorkplace) {
+            System.out.println(stat.getName());
+        }
+
+        clerk.sortByCost();
+        System.out.println();
+
+        for (Stationery stat : noviceWorkplace) {
+            System.out.println(stat.getCost());
+        }
+
+        clerk.sortByCostAndName();
+        System.out.println();
 
         for (Stationery stat : noviceWorkplace) {
             System.out.println(stat.getName());
