@@ -1,34 +1,30 @@
 package task04;
+
 import task03.*;
+import java.util.Comparator;
 
-public class NoviceSet implements Comparable<NoviceSet>{
+public class NoviceSet {
 
-    private Stationery item;
+    
+    static private Clerk noviceSet = new Clerk();
 
-    public NoviceSet(Stationery item){
-        this.item = item;
+    public static void setNoviceSet () {
+        Drawing fisrtPen = new Drawing("Pen", "blue", 100);
+        Drawing secondPen = new Drawing("Pen", "blue", 150);
+        Drawing pencil = new Drawing("Pencil", "usual", 20);
+        Paper notepad = new Paper("Notepad", 20, "yellow", 120);
+        Eraser eraser = new Eraser("Eraser", 15);
+        noviceSet.addItem(fisrtPen);
+        noviceSet.addItem(secondPen);
+        noviceSet.addItem(pencil);
+        noviceSet.addItem(notepad);
+        noviceSet.addItem(eraser);
+
     }
-
-    Stationery getItem(){
-        return item;
+    public Clerk getNoviceSet(){
+        return noviceSet;
     }
-
-    public int compareTo(NoviceSet set) {
-        String sort = "name";
-        switch (sort) {
-            case "name":
-                //sort by name
-                return 0;
-            case "cost":
-                //sort by cost
-                return 0;
-            case "cost and name":
-                //sort by cost, then by name
-                return 0;
-            default:
-                //no way
-                return -1;
-        }
-
+    public static void setSortedByName(){
+        noviceSet.getWorkplace().sort(Comparator.comparing(Stationery::getName));
     }
 }

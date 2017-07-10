@@ -1,12 +1,9 @@
 package task03;
 
-/**
- * Created by Александр on 06/07/2017.
- */
 public class Eraser extends Stationery {
     private int wasteInPercents;
 
-    Eraser(String name, int cost){
+    public Eraser(String name, int cost){
         super(name, cost);
         this.wasteInPercents = 0;
     }
