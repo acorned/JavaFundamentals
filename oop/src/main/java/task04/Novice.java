@@ -9,8 +9,8 @@ public class Novice extends Clerk{
         Drawing fisrtPen = new Drawing("Pen", "blue", 100);
         Drawing secondPen = new Drawing("Pen", "blue", 150);
         Drawing pencil = new Drawing("Pencil", "usual", 20);
-        Paper notepad = new Paper("Notepad", 20, "yellow", 120);
-        Eraser eraser = new Eraser("Eraser", 15);
+        Paper notepad = new Paper("Notepad", 20, "yellow", 20);
+        Eraser eraser = new Eraser("Eraser", 20);
         this.addItem(fisrtPen);
         this.addItem(secondPen);
         this.addItem(pencil);
@@ -18,7 +18,14 @@ public class Novice extends Clerk{
         this.addItem(eraser);
     }
 
-    public static void setSortedByName(){
-        //this.getWorkplace().sort(Comparator.comparing(Stationery::getName));
+    public void sortByName(){
+        this.getWorkplace().sort(Comparator.comparing(Stationery::getName));
+    }
+    public void sortByCost() {
+        this.getWorkplace().sort(Comparator.comparing(Stationery::getCost));
+    }
+
+    public void sortByCostAndName() {
+        this.getWorkplace().sort(Comparator.comparing(Stationery::getCost).thenComparing(Stationery::getName));
     }
 }
