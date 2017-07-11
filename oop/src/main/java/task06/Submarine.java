@@ -11,9 +11,9 @@ public class Submarine {
         this.fuel = (fuel > 0) ? fuel : 0;
     }
 
-    String goSwim(){
+    String goCruise(){
         SubmarineEngine engine = new SubmarineEngine();
-        return engine.run() ? "The submarine went swimming" : "Not enough fuel";
+        return engine.run() ? "The submarine went to cruise" : "Not enough fuel";
     }
 
     class SubmarineEngine{

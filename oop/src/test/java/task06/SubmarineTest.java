@@ -6,12 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SubmarineTest {
     @Test
-    void goSwim() {
+    void goCruise() {
         Submarine submarine = new Submarine();
         submarine.setFuel(100);
-        assertTrue(submarine.goSwim().equals("The submarine went swimming"));
+        assertTrue(submarine.goCruise().equals("The submarine went to cruise"));
         submarine.setFuel(0);
-        assertTrue(submarine.goSwim().equals("Not enough fuel"));
+        assertTrue(submarine.goCruise().equals("Not enough fuel"));
 
     }
 

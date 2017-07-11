@@ -9,5 +9,5 @@ import java.util.HashSet;
 @AllArgsConstructor
 public class Student {
     private String name;
-    HashSet<> progress
+    //HashSet<> progress
 }
