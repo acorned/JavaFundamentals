@@ -1,13 +1,9 @@
 package task05;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Value;
 
-import java.util.HashSet;
-
-@Data
-@AllArgsConstructor
+@Value
 public class Student {
     private String name;
-    //HashSet<> progress
+    private int age;
 }
