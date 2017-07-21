@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
+
 public class Pen {
     private int cost;
     private String color;
