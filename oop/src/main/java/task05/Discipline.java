@@ -28,10 +28,10 @@ public class Discipline {
     public static void printAllGrades(Discipline discipline){
         System.out.println(discipline.name);
         Discipline.disciplinesMap.get(discipline).forEach(
-                (key, value) -> {
+                (student, grade) -> {
                     System.out.println(discipline.name.gradeType().equals("Integer") ?
-                            key.getName() + ": " + value.intValue() :
-                            key.getName() + ": " + value.doubleValue());
+                            student.getName() + ": " + grade.intValue() :
+                            student.getName() + ": " + grade.doubleValue());
                 });
     }
 
