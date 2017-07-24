@@ -21,8 +21,7 @@ public class QuickSortRec {
         int j = right;
         while (i <= j) {
             while (comparator.compare(array[i], separator) < 0) i++;
-            while (comparator.compare(array[j], separator) > 0)
-                j--;
+            while (comparator.compare(array[j], separator) > 0) j--;
 
             if (i <= j) {
                 T tmp = array[i];

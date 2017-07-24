@@ -1,8 +1,6 @@
 package task06;
 
-/**
- * Created by Александр on 11/07/2017.
- */
+@AnnotationDefault(lastModified = "23.07.2017")
 public class Submarine {
 
     private int fuel = 10;
