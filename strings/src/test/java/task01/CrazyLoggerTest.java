@@ -9,6 +9,7 @@ class CrazyLoggerTest {
         logger.log("The very first message");
         logger.log("The second message");
         System.out.printf("%s", logger.getCrazyLog());
+        System.out.println(logger.search("message"));
     }
 
 }
