@@ -19,11 +19,11 @@ public class CrazyLogger {
 
     public ArrayList<String> search(String searchString){
         ArrayList<String> searchResult = new ArrayList<String>();
-        String searchFormatter = String.format(searchString);
+        String searchFormatter = String.format("(?<=\n|^)(.*%s.*?;)", searchString);
         Pattern searchPattern = Pattern.compile(searchFormatter);
-        Matcher m = searchPattern.matcher(crazyLog);
-        while (m.find()) {
-            searchResult.add(m.group());
+        Matcher searchMatcher = searchPattern.matcher(crazyLog);
+        while (searchMatcher.find()) {
+            searchResult.add(searchMatcher.group());
         }
         return searchResult;
     }
