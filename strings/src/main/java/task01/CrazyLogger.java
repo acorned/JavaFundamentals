@@ -9,11 +9,11 @@ import java.util.regex.Pattern;
 public class CrazyLogger {
 
     private StringBuilder crazyLog = new StringBuilder();
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY : hh-mm");
+    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("dd-MM-YYYY : hh-mm");
 
     public void log(String message){
         crazyLog.append(String.format("%s - %s;\n",
-                LocalDateTime.now().format(formatter),
+                LocalDateTime.now().format(TIME_FORMATTER),
                 message));
     }
 
