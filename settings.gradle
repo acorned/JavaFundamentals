@@ -3,5 +3,6 @@ rootProject.name = 'JavaFundamentals'
 include 'Intro',
         'oop',
         'sort',
-        'strings'
+        'strings',
+        'io'
 
