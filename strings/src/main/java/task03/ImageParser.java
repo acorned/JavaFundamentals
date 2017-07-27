@@ -1,8 +1,11 @@
 package task03;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ImageParser {
 
@@ -10,19 +13,29 @@ public class ImageParser {
         ArrayList<String> imageLinks = new ArrayList<>();
         StringBuilder fileContent = new StringBuilder();
         try (BufferedReader br = new BufferedReader(
-                new FileReader(path))) {
+                new InputStreamReader(
+                new FileInputStream(path), "windows-1251"))) {
             while (br.ready()){
-                fileContent.append(br.read());
+                fileContent.append((char) br.read());
             }
-            System.out.println("File OK");
+
+            System.out.println("FileOK");
+
+            Pattern searchPattern = Pattern.compile("((?<=\\s|^)[A-ZА-Я][^.]*?((\\s|\\()[Рр]ис(\\.|ун(ок|ки|ку|ка|ке|кам|ках|ком|ками)))+(\\s\\d|\\d)(.*)?\\.)");
+            Matcher searchMatcher = searchPattern.matcher(fileContent);
+
+            while (searchMatcher.find()) {
+                imageLinks.add(searchMatcher.group());
+            }
+
 
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         return imageLinks;
     }
 
     public static void main(String[] args) {
-        parseFile("strings/src/main/resources/Java.SE.03.Information handling_task_attachment.html");
+        System.out.println(parseFile("strings/src/main/resources/Java.SE.03.Information handling_task_attachment.html"));
     }
 }
