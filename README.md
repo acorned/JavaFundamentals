@@ -6,7 +6,7 @@ There is a solution of all tasks given at EPAM Java Core training.
 ## Which modules are already finished?
 1. Intro
 2. Object-Oriented Programming
-3. ~~Strings~~
+3. Strings
 4. ~~Input/output~~
 5. ~~Exceptions~~
 
