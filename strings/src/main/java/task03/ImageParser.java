@@ -21,8 +21,10 @@ public class ImageParser {
             }
 
             System.out.println("FileOK");
+            String sentenceBegin = "";
+            String sentenceEnd = "";
 
-            Pattern searchPattern = Pattern.compile("((?<=\\s|^)[A-ZА-Я][^.]*?(((\\s|\\()[Рр]ис(\\.|ун(ок|ки|ку|ка|ке|кам|ках|ком|ками)))\\s\\d|\\d)+(.*)?(\\.|\\?|!))");
+            Pattern searchPattern = Pattern.compile("((?<=\\s|^)[A-ZА-Я][^.]*?((\\s|\\()[Рр]ис(\\.|ун(ок|ки|ку|ка|ке|кам|ках|ком|ками)))+(\\s\\d|\\d)(.*)?\\.)");
             Matcher searchMatcher = searchPattern.matcher(fileContent);
 
             while (searchMatcher.find()) {
@@ -38,5 +40,6 @@ public class ImageParser {
 
     public static void main(String[] args) {
         System.out.println(parseFile("strings/src/main/resources/Java.SE.03.Information handling_task_attachment.html").size());
+        System.out.println(parseFile("strings/src/main/resources/Java.SE.03.Information handling_task_attachment.html").get(0));
     }
 }

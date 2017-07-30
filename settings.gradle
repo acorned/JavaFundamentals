@@ -4,5 +4,7 @@ include 'Intro',
         'oop',
         'sort',
         'strings',
-        'io'
+        'io',
+        'collections',
+        'exceptions'
 
