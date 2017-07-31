@@ -1,0 +1,12 @@
+public
+enum
+public
+switch
+case
+case
+return
+case
+case
+return
+return
+Total: 11
