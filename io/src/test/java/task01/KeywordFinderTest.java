@@ -10,7 +10,7 @@ class KeywordFinderTest {
     @Test
     void findKeywords() {
         assertThat(KeywordFinder.findAllKeywords("src/main/resources/Disciplines.java",
-                "src/main/resources/keyword_find_result.txt"), Is.is(11));
+                "src/main/resources/keyword_find_result_by_FileOutputStream.txt"), Is.is(11));
     }
 
 }
