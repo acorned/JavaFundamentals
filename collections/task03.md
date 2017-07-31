@@ -1,8 +1,13 @@
 # Определена иерархия классов
-<code>class MedicalStaff{}
+<code>
+class MedicalStaff{}
+  
 class Doctor extends MedicalStaff{}
+
 class Nurse extends MedicalStaff{}
-class HeadDoctor extends Doctor{}</code>
+
+class HeadDoctor extends Doctor{}
+</code>
 
 ## Укажите корректные и некорректные операторы. Дайте ответу пояснение.
 |Код|Корректность|
